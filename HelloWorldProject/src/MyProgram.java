@@ -29,16 +29,22 @@ public class MyProgram {
 		try{
 			File f = new File("HelloWorldProject/src/data.txt");
 			x = new Scanner (f);
-			//String name = x.nextLine();
+			String name = x.nextLine();
 			//System.out.println(name);
-			int count; 
-			while(count )
+			
+			while(x.hasNext()){
+				if(name.indexOf("car") != -1){
+					O.add(new Train(name, x.nextLine(), x.nextLine(), x.nextLine(), x.nextInt(), x.nextInt())); 
+				}
+			}
+			
 		}
 		catch(Exception e)
 		{
 			System.out.println(e.getMessage());
 		}
 
+		System.out.println(O); 
 		
 
 	}
