@@ -10,7 +10,7 @@ public class Train {
         return product; 
     }
 
-    public String to(){
+    public String city(){
         return destination; 
     }
 
@@ -24,6 +24,10 @@ public class Train {
 
     public int getMileage(){
         return miles; 
+    }
+
+    public String toString(){
+        return name + " " +  product + " " + origin + " " +  destination + " " + weight + " " + miles + "\n"; 
     }
 
     public Train(String n, String p, String o, String d, int w, int m){

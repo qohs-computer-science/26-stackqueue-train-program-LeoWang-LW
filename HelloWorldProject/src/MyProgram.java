@@ -29,12 +29,14 @@ public class MyProgram {
 		try{
 			File f = new File("HelloWorldProject/src/data.txt");
 			x = new Scanner (f);
-			String name = x.nextLine();
+			
 			//System.out.println(name);
 			
 			while(x.hasNext()){
-				if(name.indexOf("car") != -1){
+				String name = x.nextLine();
+				if(name.indexOf("CAR") != -1){
 					O.add(new Train(name, x.nextLine(), x.nextLine(), x.nextLine(), x.nextInt(), x.nextInt())); 
+					
 				}
 			}
 			
@@ -44,7 +46,22 @@ public class MyProgram {
 			System.out.println(e.getMessage());
 		}
 
-		System.out.println(O); 
+		while(!O.isEmpty()){
+			Train sort = O.remove(); 
+			if(sort.getMileage() > 700){
+				needMaintenance.add(sort); 
+			}
+			else{
+				if(sort.city().equals("Baltimore")){
+					if(sort.getWeight() >= 100000)
+				}
+			}
+		}
+
+		for (Train data : O){
+			System.out.print(data); 
+		}
+		
 		
 
 	}
